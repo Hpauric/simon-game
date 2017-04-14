@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
-  $('audio').prop('volume', 0);
+  //Turn audio off for debugging
+  //$('audio').prop('volume', 0);
 
   var audio = $('audio')[0];
   var audio2 = $('audio')[1];
