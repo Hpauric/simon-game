@@ -1,0 +1,275 @@
+
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  font-family: 'Audiowide', cursive;
+}
+
+
+/* The container is for the inner-circle */
+
+div.container {
+  position: relative;
+  margin-top: 10vw;
+}
+
+div.semi-circle-container {
+  margin: 0 auto;
+  background: white;
+}
+
+
+div.quarter-circle {
+  display: inline-block;
+  animation: my-animation 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes my-animation {
+  0% {
+    width: 10vw;
+    height: 10vw;
+    margin: 0.5vw;
+  }
+  75% {
+    width: 25vw;
+    height: 25vw;
+    margin: 0.5vw;
+  }
+  100% {
+    width: 25vw;
+    height: 25vw;
+    margin: 1.5vw;
+  }
+}
+
+div.quarterCircleTopLeft {
+  border-radius: 100% 0 0 0;
+  background-color: #dd7788;
+}
+
+div.quarterCircleTopLeft:active {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: -15px -15px 150px 10px #f3172d inset;
+}
+
+div.quarterCircleTopRight {
+  border-radius: 0 100% 0 0;
+  background-color: #667799;
+  transition: background-color .2s;
+}
+
+div.quarterCircleTopRight:active {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 15px -15px 150px 10px #2052f3 inset;
+}
+
+div.quarterCircleBottomLeft {
+  border-radius: 0 0 0 100%;
+  background-color: #f2e090;
+  transition: background-color .2s;
+}
+
+div.quarterCircleBottomLeft:active {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: -15px 15px 150px 10px #f2f735 inset;
+}
+
+div.quarterCircleBottomRight {
+  border-radius: 0 0 100% 0;
+  background-color: #7a9460;
+  transition: background-color .2s;
+}
+
+div.quarterCircleBottomRight:active {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 15px 15px 150px 10px #49fb35 inset;
+}
+
+div.quarter-circle:hover {
+  cursor: pointer;
+}
+
+.inner-circle {
+  position: absolute;
+  border-radius: 100% 100% 100% 100%;
+  width: 30vw;
+  height: 30vw;
+  top: calc(50% - 15vw);
+  left: calc(50% - 15vw);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Alfa Slab One', cursive;
+  color: black;
+}
+
+.center-text {
+  font-size: 7vw;
+  font-family: 'Alfa Slab One', cursive;
+  color: black;
+}
+
+.buttons-container {
+  position: relative;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Audiowide', cursive;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border-color: black;
+  height: 4vw;
+  font-size: 2vw;
+  padding: 0;
+  outline: none !important;
+}
+
+.btn-round {
+  padding: 0 5px 0 5px;
+  border-radius: 25px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: white;
+  color: black;
+}
+
+#restart {
+  margin-left: -2vw;
+}
+
+#start {
+  margin-right: 3vw;
+  margin-left: 0;
+}
+
+.third-row-container {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 7vw;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5px; 
+}
+
+.steps-text {
+  font-family: 'Audiowide', cursive;
+  line-height: 3vw;
+  font-size: 2vw;
+  margin-right: 5px;
+}
+
+
+
+.my-badge {
+  border-radius: 100vh;
+  height: 2.5vw;
+  padding:  0 5px;
+  line-height: 2.5vw;
+  font-size: 2vw;
+  color: white;
+  font-family: 'Audiowide', cursive;
+  background-color: black;
+}
+
+
+.strict-mode-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strict-mode-text {
+  line-height: 3vw;
+  font-size: 2vw;
+  font-family: 'Audiowide', cursive;
+  margin-right: 5px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+  height: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.slider {
+  align-self: center;
+  border-radius: 100vw;
+  height:  3vw;
+  width: 6vw;
+  cursor: pointer;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 2.4vw;
+  width: 2.4vw;
+  left: 0.4vw;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: red;
+  box-shadow: -2px 0px 10px 1px black inset;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2.6vw);
+  -ms-transform: translateX(2.6vw);
+  transform: translateX(2.6vw);
+}
